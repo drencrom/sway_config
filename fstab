@@ -1,0 +1,23 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+# /dev/sdb1
+UUID=5d1b1a9e-db8c-4f72-880b-1296e284d032	/         	ext4      	rw,noatime,discard,data=ordered	0 1
+
+# /dev/sdb3
+UUID=e3cfa66a-53ec-4705-bec6-397e90970f92	/home     	ext4      	rw,noatime,discard,data=ordered	0 2
+
+# /dev/sdb2
+UUID=aa676b2a-de9b-4ede-936d-5b11bf83058b       none            swap            defaults        0 0
+
+# /dev/sda1
+UUID=ffd9f503-4244-441e-b13a-02fafbd9f548	/mnt		btrfs		defaults	0 0	
+
+# NAS
+//nas/video /nas/video cifs username=jorge,password=J1732in!,x-systemd.automount,vers=2.0,uid=1000 0 0
+//nas/music /nas/music cifs username=jorge,password=J1732in!,x-systemd.automount,vers=2.0,uid=1000  0 0
+//nas/photo /nas/photo cifs username=jorge,password=J1732in!,x-systemd.automount,vers=2.0,uid=1000  0 0
+//nas/books /nas/books cifs username=jorge,password=J1732in!,x-systemd.automount,vers=2.0,uid=1000,nobrl  0 0	# calibre preicsa nobrl
+//nas/datos /nas/datos cifs username=jorge,password=J1732in!,x-systemd.automount,vers=2.0,uid=1000  0 0
+

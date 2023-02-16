@@ -1,0 +1,10 @@
+[Unit]
+Description=Sincroniza home con NAS
+
+[Service]
+Environment="RSYNC_PASSWORD=xxx"
+Type=simple
+ExecStart=rsync -a --delete --exclude="ownCloud" --exclude="ownCloud-fing" --exclude=".cache" /home/jorge/ jorge@nas::NetBackup/home-jorge
+
+[Install]
+WantedBy=default.target
