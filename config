@@ -237,6 +237,9 @@ bindsym $mod+m move workspace to output right
 bindsym Print exec grimshot save active
 bindsym $mod+Print exec grimshot save area
 
+# show last notifications
+bindsym $mod+z exec dunstctl history-pop
+
 output HDMI-A-2 pos 0 0 res 1920x1080 bg ~/Imágenes/cubes.jpg stretch
 output DP-2 pos 1920 180 res 1440x900 bg ~/Imágenes/cubes.jpg stretch
 
